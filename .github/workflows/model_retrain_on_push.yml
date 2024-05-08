@@ -27,14 +27,6 @@ jobs:
         echo "$timestamp" > timestamp.txt
       id: timestamp 
 
-    - name: Check File Permissions
-      run: |
-        ls -l ./src/train_model.py
-
-    - name: Set File Permissions
-      run: |
-        chmod +x ./src/train_model.py
-
     - name: Retrain Model
       run: |
         timestamp=$(cat timestamp.txt) # Use the timestamp in your training script
