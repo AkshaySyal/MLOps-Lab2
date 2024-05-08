@@ -7,7 +7,7 @@
 name: Periodic Model Training
 on: 
   schedule:
-    - cron: '*/5 * * * *' 
+    - cron: "*/6 * * * *" 
 
 jobs:
   retrain:
