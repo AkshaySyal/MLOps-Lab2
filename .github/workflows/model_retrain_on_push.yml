@@ -1,13 +1,13 @@
-name: Model Retraining on Push to Main
+# name: Model Retraining on Push to Main
 
-on:
- push:
-   branches:
-     - main  # Trigger the workflow on pushes to the main branch
-# name: Periodic Model Training
-# on: 
-#   schedule:
-#     - cron: '* * * * *' 
+# on:
+#  push:
+#    branches:
+#      - main  # Trigger the workflow on pushes to the main branch
+name: Periodic Model Training
+on: 
+  schedule:
+    - cron: '9 * * * *' 
 
 jobs:
   retrain:
